@@ -1,0 +1,20 @@
+name: Session
+description: 'Provides Session content type and related configuration. <em>Sessions</em> are talks given by individuals.'
+type: module
+core: 8.x
+dependencies:
+  - badcamp_event
+  - datetime_range
+  - field
+  - field_group
+  - field_permissions
+  - file
+  - menu_ui
+  - node
+  - options
+  - path
+  - taxonomy
+  - text
+  - user
+  - video_embed_field
+package: BADCamp
