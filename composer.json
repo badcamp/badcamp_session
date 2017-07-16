@@ -1,0 +1,19 @@
+{
+    "name": "badcamp/badcamp_session",
+    "description": "Provides Session content type and related configuration. <em>Sessions</em> are talks given by individuals.",
+    "type": "drupal-module",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Sean Dietrich",
+            "email": "sean.e.dietrich@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "badcamp/badcamp_event": "dev-master",
+        "drupal/field_group": "^1.0@RC",
+        "drupal/video_embed_field": "^1.5",
+        "drupal/field_permissions": "^1.0@beta"
+    }
+}
