@@ -3,9 +3,9 @@ status: true
 dependencies:
   config:
     - field.field.node.session.field_event_date_and_time
+    - field.field.node.session.field_event_venue
     - field.field.node.session.field_session_description
     - field.field.node.session.field_session_files
-    - field.field.node.session.field_session_room
     - field.field.node.session.field_session_skill_level
     - field.field.node.session.field_session_speakers
     - field.field.node.session.field_session_status
@@ -81,8 +81,8 @@ third_party_settings:
       label: 'Session files/video'
     group_session_administration:
       children:
+        - field_event_venue
         - field_session_status
-        - field_session_room
         - field_session_time_slot
         - field_event_date_and_time
       parent_name: group_session_info
@@ -107,10 +107,16 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_event_date_and_time:
-    weight: 40
+    weight: 0
     settings: {  }
     third_party_settings: {  }
     type: daterange_default
+    region: content
+  field_event_venue:
+    weight: -3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_session_description:
     weight: 34
@@ -128,14 +134,8 @@ content:
     third_party_settings: {  }
     type: file_generic
     region: content
-  field_session_room:
-    weight: 38
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
   field_session_skill_level:
-    weight: -2
+    weight: -1
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -150,19 +150,19 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_session_status:
-    weight: 37
+    weight: -2
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_session_time_slot:
-    weight: 39
+    weight: -1
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_session_track:
-    weight: -3
+    weight: -2
     settings: {  }
     third_party_settings: {  }
     type: options_select
